@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: rgba(255, 255, 255, 0.85) !important;
+    padding-top: 90px; 
+    background: linear-gradient(45deg, #2b2b6b, #1b2735 70%, #6011a0, blue);
+    background-size: 300% 300%;
+    animation: colors 5s ease infinite;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    background: transparent !important;
+}
+
+.navbar {
+    backdrop-filter: blur(6px);
+    background-color: rgba(15, 15, 15, 0.95) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand span {
+    color: rgba(18, 115, 241, 0.852);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-image: linear-gradient(
+    -225deg,
+    #be0cf5 0%,
+    #3b20d1 29%,
+    #4413f5 67%,
+    #1e186e 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.home .home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    
+}
+
+span{
+    background-image: linear-gradient(
+    -225deg,
+    #be0cf5 0%,
+    #3b20d1 29%,
+    #4413f5 67%,
+    #1e186e 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    margin-top: -500px;
+    width: 24vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid blue;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+    transform: scale(1.1);
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: blue;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: aliceblue;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3)translateY(-5px);
+    background-image: linear-gradient(
+    -225deg,
+    #be0cf5 0%,
+    #3b20d1 29%,
+    #4413f5 67%,
+    #1e186e 100%
+    );
+    box-shadow: 0  0 25px blue;
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content p{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+.services {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: rgba(15, 15, 15, 0.95);
+}
+
+.services .heading {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.service-box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(143, 57, 255, 0.3)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(24, 23, 116, 0.5);
+}
+
+.service-box:hover:before{
+    opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.service-box i {
+    font-size: 3rem;
+    color: rgba(18, 115, 241, 0.852);
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    position: relative;
+  z-index: 2;
+}
+
+.logo{
+    color: blue;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.typing-text{
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Técnico de Informática";
+    background-image: linear-gradient(
+    -225deg,
+    #a58ff3 0%,
+    #8b92f5 29%,
+    #ff95b8 67%,
+    #f5f3ba 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -16px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid blue;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Técnico de Informática";
+    }
+    21%, 40%{
+        content: "Estudante de Ánalise e Desenvolvimento de Sistemas";
+    }
+    41%, 60%{
+        content: "Estudante de Ciência de Dados";
+    }
+    61%, 80%{
+        content: "Gamer";
+    }
+    81%, 100%{
+        content: "Nerd";
+    }
+}
+
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.lorem{
+    background-image: linear-gradient(
+    -225deg,
+    #bbbbbb 0%,
+    #ffffff 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+p{
+    text-align: justify;
+}
+
+.hover-underline {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+  cursor: pointer;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+  cursor: pointer;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+  cursor: pointer;
+}
