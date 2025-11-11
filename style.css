@@ -100,16 +100,21 @@ span{
 
 .home-img{
     border-radius: 50%;
+    
 }
 
 .home-img img{
     position: relative;
-    margin-top: -150px;
+    margin-top: -450px;
     width: 24vw;
     border-radius: 50%;
     box-shadow:  0 10px 10px rgba(146, 5, 202, 0.356);
     cursor: pointer;
     transition: 0.2s linear;
+    border: 0 solid transparent;
+    padding: 0.3em;
+    background: linear-gradient(to right, rgb(19, 4, 107), rgb(163, 4, 255)); 
+    
 }
 
 .home-img img:hover{
