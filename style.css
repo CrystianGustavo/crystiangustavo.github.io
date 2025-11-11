@@ -418,3 +418,9 @@ p{
   transform: scaleX(1);
   cursor: pointer;
 }
+
+.multiple-text{
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 280px;
+}
