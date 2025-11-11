@@ -104,7 +104,7 @@ span{
 
 .home-img img{
     position: relative;
-    margin-top: -500px;
+    margin-top: -150px;
     width: 24vw;
     border-radius: 50%;
     box-shadow:  0 10px 10px rgba(146, 5, 202, 0.356);
@@ -198,6 +198,8 @@ span{
     overflow: hidden;
     border-radius: 15px;
     transition: all 0.5s ease;
+    position: relative;
+    isolation: isolate;
 }
 
 .service-box::before{
@@ -216,6 +218,8 @@ span{
     transform: rotate(-45deg);
     transition: all 0.5s ease;
     opacity: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .service-box:hover {
