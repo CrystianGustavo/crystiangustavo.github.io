@@ -40,6 +40,7 @@ section {
     color: rgba(255, 255, 255, 0.75) !important;
     font-weight: 500;
     margin-left: 10px;
+    margin-right: 10px;
     transition: color 0.3s ease;
 }
 
@@ -176,6 +177,7 @@ span{
         margin-top: 4rem;
     }
 }
+
 
 .services {
     padding: 80px 10%;
