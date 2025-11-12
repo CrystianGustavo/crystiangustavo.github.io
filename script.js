@@ -1,12 +1,26 @@
 const typed = new Typed(".multiple-text", {
     strings: [
-        "Teste 1",
-        "Outro teste 2",
-        "Teste 3",
-        "Teste 4"
+        "Técnico de Informática",
+        "Estudante de Tecnologia em Ánalise e Desenvolvimento de Sistemas",
+        "Estudante de Tecnologia em Ciência de Dados",
+        "Entusiasta de Tecnologia",
+        "Gamer",
+        "Nerd"
     ],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 100,
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 50,
     loop: true
 })
+
+var nlContainer = document.getElementById("navbarNav");
+
+var navs = nlContainer.getElementsByClassName("nav-link");
+
+for(var i = 0; i < navs.length; i++){
+    navs[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
